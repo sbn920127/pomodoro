@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../css/page/w-1.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="title">POMODORO</h1>
+        <nav class="nav">
+            <a href="" class="nav-link">
+                <i class="material-icons">format_list_bulleted</i>
+            </a>
+            <a href="" class="nav-link">
+                <i class="material-icons">assessment</i>
+            </a>
+            <a href="" class="nav-link">
+                <i class="material-icons">library_music</i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="input">
+            <input id="add_todo" type="text" placeholder="新增事項...">
+            <i class="material-icons">add</i>
+        </div>
+        <div class="player">
+            <div class="player-wrap">
+                <svg class="pie" viewBox="0 0 540 540">
+                    <circle class="cir" r="270" cx="50%" cy ="50%" />
+                </svg>
+                <div class="player-btn">
+                    <i class="material-icons">play_circle_filled</i>
+                </div>
+            </div>
+        </div>
+        <div class="list-wrap">
+            <div class="todo--do">
+                <div class="todo__checkBox">
+                    <i class="material-icons">radio_button_unchecked</i>
+                </div>
+                <div class="todo__content">
+                    <h2>the First thing to do today</h2>
+                    <div class="slice">
+                        <span class="pie"></span>
+                        <span class="pie"></span>
+                    </div>
+                </div>
+                <div class="todo__count-down">
+                    25:00
+                </div>
+            </div>
+            <div class="todo-wrap">
+                <ul class="todo list-unstyled">
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                </ul>
+                <a href="" class="more">MORE</a>
+            </div>
+        </div>
+    </main>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+<script src="../js/page/w-1.js"></script>
+</body>
+</html>
