@@ -10,6 +10,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="stylesheet" href="../css/page/w-1.css">
+    <script type="text/tmplate" id="doSomething">
+        <li class="todo__item">
+            <div class="todo__checkBox">
+                <i class="material-icons">radio_button_unchecked</i>
+            </div>
+            <div class="todo__content">
+                <p> {{something}}</p>
+                <i class="material-icons">play_circle_outline</i>
+            </div>
+        </li>
+    </script>
     <title>Document</title>
 </head>
 <body>
@@ -19,12 +30,15 @@
         <nav class="nav">
             <a href="" class="nav-link">
                 <i class="material-icons">format_list_bulleted</i>
+                <span class="text">to-do list</span>
             </a>
             <a href="" class="nav-link">
                 <i class="material-icons">assessment</i>
+                <span class="text">analytics</span>
             </a>
             <a href="" class="nav-link">
                 <i class="material-icons">library_music</i>
+                <span class="text">ringtones</span>
             </a>
         </nav>
     </header>
@@ -59,8 +73,8 @@
                     25:00
                 </div>
             </div>
-            <div class="todo-wrap">
-                <ul class="todo list-unstyled">
+            <div class="todo">
+                <ul class="list-unstyled">
                     <li class="todo__item">
                         <div class="todo__checkBox">
                             <i class="material-icons">radio_button_unchecked</i>
@@ -93,11 +107,80 @@
             </div>
         </div>
     </main>
+    <section class="menu-content-1">
+        <div class="list-wrap">
+            <div class="todo--empty">
+                <div class="accordion">
+                    <h3 class="title">to-do</h3>
+                    <i class="material-icons">arrow_drop_down</i>
+                </div>
+                <ul class="list-unstyled accordion__panel">
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                    <li class="todo__item">
+                        <div class="todo__checkBox">
+                            <i class="material-icons">radio_button_unchecked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="todo--done">
+                <div class="accordion">
+                    <h3 class="title">todo__item</h3>
+                    <i class="material-icons">arrow_drop_down</i>
+                </div>
+                <ul class="list-unstyled accordion__panel">
+                    <li class="todo__item">
+                        <div class="todo__checkBox check">
+                            <i class="material-icons">radio_button_checked</i>
+                        </div>
+                        <div class="todo__content">
+                            <p>the second thing to do today</p>
+                            <i class="material-icons">play_circle_outline</i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="menu-content-2">
+        <h3 class="title">focus time</h3>
+        <div class="num-box">
+            <span class="prefix">TODAY</span>
+            <span class="num">20</span>
+            <span class="suffix">/TOMATO</span>
+        </div>
+        <div class="num-box">
+            <span class="prefix">WEEK</span>
+            <span class="num">108</span>
+            <span class="suffix">/TOMATO</span>
+        </div>
+    </section>
+    <section class="menu-content-3">
+
+    </section>
 </div>
-<script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
 <script src="../js/page/w-1.js"></script>
 </body>
