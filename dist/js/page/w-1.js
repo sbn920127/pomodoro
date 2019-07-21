@@ -2,14 +2,46 @@ $(function () {
     let pieSvg = new Snap('.pie');
     let pieCir = pieSvg.select('.cir');
     let pieCirLength = getCircleLength(pieCir);
+
+    let $addTodo = $('#add_todo'),
+        $todoList = $('ul.todo'),
+        $checkBtn = $('.todo__checkBox');
+
+    let $timer = $('.todo__count-down'),
+        count,
+        $player = $('.player'),
+        $playBtn = $player.find('.player-btn');
     let workTime = 25 * 60 * 1000;
     let restTime = 5 * 60 * 1000;
     let proportion = pieCirLength / workTime;
-    let $timer = $('.todo__count-down');
-    let count;
-    let count2;
-    let $player = $('.player');
-    let $playBtn = $player.find('.player-btn');
+
+    $checkBtn.on('click', function () {
+        let $this = $(this);
+        $this.parent('.todo__item').addClass('check');
+        $this.find('.material-icons').text('radio_button_checked');
+
+    });
+
+
+
+    function doSomething(val) {
+        let $template = $('#doSomething');
+
+        return $template.html().replace('{{something}}', val);
+    }
+
+    $addTodo.on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            let $this = $(this);
+            let newThings = $this.val();
+
+            $this.val("");
+
+            $todoList.append(doSomething(newThings));
+        }
+    });
+
+
 
 
     pieCir.attr({
