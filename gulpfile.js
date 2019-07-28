@@ -7,7 +7,7 @@ const gulpDebug = require('gulp-debug');
 const gulpRename = require('gulp-rename');
 
 const cssSrc  = 'src/scss';
-const cssDest = 'dist/css';
+const cssDest = 'docs/css';
 const scssOption = {
     outputStyle : 'compact'
 };
