@@ -1,4 +1,5 @@
 $(function () {
+    let $window = $(window);
     let pieSvg = new Snap('.pie');
     let pieCir = pieSvg.select('.cir');
     let pieCirLength = getCircleLength(pieCir);
@@ -14,6 +15,39 @@ $(function () {
     let workTime = 25 * 60 * 1000;
     let restTime = 5 * 60 * 1000;
     let proportion = pieCirLength / workTime;
+    let $todoDo = $('.todo--do');
+
+    let mobile = window.matchMedia('(max-width: 767px)');
+
+    let $mainNav = $('#page-header .nav');
+    let $navBtn = $mainNav.find('.nav-link');
+    let $closeBtn = $('#page-header .close');
+    let $body = $(document.body);
+
+
+    $mainNav.on('click', '.nav-link',  function () {
+       let $this = $(this);
+       let openContent = $this.data('open');
+
+       $this.siblings().removeClass('active');
+       $this.addClass('active');
+
+
+       $body.removeClass().addClass('open-menu').addClass(openContent);
+
+        return false;
+    });
+
+    $closeBtn.on('click', function () {
+        $body.removeClass();
+        $mainNav.find('.nav-link').removeClass('active');
+    });
+
+    $window.on('resize', function () {
+        if(mobile.matches) {
+            $todoDo.append($player);
+        }
+    }).trigger('resize');
 
     $checkBtn.on('click', function () {
         let $this = $(this);
